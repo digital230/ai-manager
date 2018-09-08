@@ -1,0 +1,15 @@
+{
+    "name": "ai-manager",
+    "description": "",
+    "secretKey": "",
+    "services": [
+        {
+            "appId": "",
+            "id": "4b9d9d10-b37b-11e8-bf00-a70644ac8c14",
+            "type": "endpoint",
+            "appPassword": "",
+            "endpoint": "http://localhost:8080/api/messages",
+            "name": "ai-manager"
+        }
+    ]
+}
