@@ -9,7 +9,7 @@
             "type": "endpoint",
             "appId": "917f02b2-c40f-43cb-b64d-e0e65819c35c",
             "appPassword": "zhrmUYJ1@|vpdFFMG9531:(",
-            "endpoint": "http://localhost:3978/api/messages"
+            "endpoint": "https://aimanager.herokuapp.com/api/messages"
         }
     ]
 }
