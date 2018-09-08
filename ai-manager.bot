@@ -4,12 +4,12 @@
     "secretKey": "",
     "services": [
         {
-            "appId": "",
             "id": "4b9d9d10-b37b-11e8-bf00-a70644ac8c14",
+            "name": "ai-manager",
             "type": "endpoint",
-            "appPassword": "",
-            "endpoint": "http://localhost:8080/api/messages",
-            "name": "ai-manager"
+            "appId": "917f02b2-c40f-43cb-b64d-e0e65819c35c",
+            "appPassword": "zhrmUYJ1@|vpdFFMG9531:(",
+            "endpoint": "https://aimanager.herokuapp.com/api/messages"
         }
     ]
 }
