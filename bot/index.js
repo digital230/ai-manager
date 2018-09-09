@@ -6,7 +6,6 @@ export default (connector) => {
 
   const bot = new builder.UniversalBot(connector, async function (session) {
     let user = await UserService.saveUser(session.message);
-    console.log(user)
     if (user && (user.name == '' || user.name == 'User')) {
       session.userData = {...user.toJSON()};
       session.beginDialog('askUserInfo')
