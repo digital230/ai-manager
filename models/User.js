@@ -7,7 +7,7 @@ const UserSchema = new Schema({
   conversationId: {type: String, required: true},
   userId: {type: String, required: true},
   name: {type: String, required: true},
-  dob: {type: String, required: true},
+  dob: {type: String},
   isGroup: Boolean,
 }, {timestamps: true, collection: "users"});
 
