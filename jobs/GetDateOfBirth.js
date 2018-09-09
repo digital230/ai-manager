@@ -7,7 +7,7 @@ const cJob = CronJob.CronJob;
 export default (bot) => {
     console.log('You will see this message every second');
 
-  new cJob('39 * * * * *', async () => {
+  new cJob('01 01 * * * *', async () => {
     const User = mongoose.model('User');
     let users = await User.find({dob: {$exists: false}});
     for(let u of users) {
