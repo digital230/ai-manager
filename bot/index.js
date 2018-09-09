@@ -13,6 +13,11 @@ export default (connector) => {
       session.userData = {...user._doc};
       session.beginDialog('askUserInfo')
     }
+
+    if (user && user.name != "" || user.name != 'User') {
+      session.userData = {...user._doc};
+      session.beginDialog('welcome')
+    }
     // session.send("You said: %s", session.message.text);
   }).set('storage', inMemoryStorage);
 
