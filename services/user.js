@@ -23,7 +23,7 @@ class UserService {
       isGroup: conversation.isGroup || false
     }
     return new Promise ((resolve, reject) => {
-      User.findOrCreate({userId: data.userId}, data, (err, res) => {
+      User.findOrCreateOrUpdate({userId: data.userId}, data, (err, res) => {
         if (err) reject(err)
         else resolve(res);
       })

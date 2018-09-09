@@ -12,12 +12,18 @@ const UserSchema = new Schema({
 }, {timestamps: true, collection: "users"});
 
 
-UserSchema.statics.findOrCreate = function findOrCreate(cond, data, cb) {
+UserSchema.statics.findOrCreateOrUpdate = function findOrCreateOrUpdate(cond, data, cb) {
   let self = this;
 
   self.findOne(cond, (err, user) => {
     if (user) {
-      return cb(err, user);
+      self.updateOne(cond, data, {returnNewDocument: true}, (err, updatedUser) => {
+        if (updatedUser) {
+          self.findOne(cond, (err, res) => {
+            return cb(err, res);
+          });
+        }
+      });
     }
 
     if (!user) {
