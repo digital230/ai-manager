@@ -15,8 +15,7 @@ class UserService {
 
     let data = {
       address: {
-        addressId: address.id,
-        channelId: address.channelId,
+        ...address
       },
       userId: user.id,
       name: user.name,

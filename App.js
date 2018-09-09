@@ -9,6 +9,7 @@ import botConnector from './bootstrap/botConnector';
 import Bot from './bot';
 import db from './bootstrap/db';
 import dialogs from './dialogs';
+import jobs from './jobs';
 
 
 
@@ -17,4 +18,4 @@ db();
 server().post('/api/messages', connector.listen());
 const bot = Bot(connector); // enty point for bot
 dialogs(bot);
-
+jobs(bot)
