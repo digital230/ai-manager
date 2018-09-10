@@ -6,7 +6,7 @@ export default () => {
   dbPromise.then(db => {
     if(db) console.log('dbconnected');
     return db;
-  });
+  }).catch(err => console.log(err));
 
   require('../models')
 
