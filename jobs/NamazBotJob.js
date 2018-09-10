@@ -6,8 +6,8 @@ import moment from 'moment';
 const cJob = CronJob.CronJob;
 
 export default (bot) => {
-  const str = '00 */10 * * * 1-5';
-  new cJob('20 * * * * 1-5', async () => {
+  const str = '00 */30 * * * 1-5';
+  new cJob(str, async () => {
     const Store = mongoose.model('Store');
     const User = mongoose.model('User');
     let users = await User.find({});
