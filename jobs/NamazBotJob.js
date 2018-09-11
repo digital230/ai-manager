@@ -14,7 +14,7 @@ export default (bot) => {
 
     let namaz = await Store.findOne({_id: '0'});
     let cTime = Date.parse(`01/01/2011 ${moment().format('hh:mm A')}`)
-    let cUTime = Date.parse(`01/01/2011 ${moment().add(20, 'minutes').format('hh:mm A')}`)
+    let cUTime = Date.parse(`01/01/2011 ${moment().add(30, 'minutes').format('hh:mm A')}`)
     let noInd = ['day', 'iDate', 'date', 'sunrise'];
 
     if (namaz) {

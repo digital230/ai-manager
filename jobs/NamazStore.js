@@ -9,11 +9,12 @@ import {structure} from '../utils/constants'
 const cJob = CronJob.CronJob;
 
 export default (bot) => {
-  const str = '0 0 */12 * * 1-5';
+  const str = '00 01 * * 1-5';
   new cJob(str, async () => {
     const Store = mongoose.model('Store');
     let namaz = await Store.findOne({_id: '0'});
     let prayers = [];
+    console.log('namaz')
 
     const options = {
       uri: `https://www.islamicfinder.org/world/pakistan/1172451/lahore-prayer-times/`,
